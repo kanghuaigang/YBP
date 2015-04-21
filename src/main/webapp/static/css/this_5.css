@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+/*主要内容的非公共样式*/
+.silder{ width:645; margin:auto; height:500px; position:relative; overflow:hidden;}
+.conbox{position:absolute;/*必要元素*/}
+
+.switcher{position:absolute;bottom:5px;right:180px;float:right;z-index:99;}
+.switcher a{ background-color:#2e2e2e; cursor:pointer; float:left; font-family:arial; height:18px; line-height:18px; width:48px ;margin:4px;text-align:center;color:#ffffff; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.switcher a.cur,.switcher a:hover{ background-color:#164cb9; height:24px;line-height:24px;width:64px;margin:0 2px;color:#fff;font-weight:800;}
+
+#slider_1 .conbox{ width:9999em;}
+#slider_1 .conbox div{ width:645px; height:500px; overflow:hidden; float:left; cursor:pointer;}

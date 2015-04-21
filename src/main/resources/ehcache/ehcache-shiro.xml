@@ -1,0 +1,36 @@
+<ehcache updateCheck="false">
+   <defaultCache name="shiroCache"
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="false"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            />
+	<cache name="dealerCache"  
+		maxElementsInMemory="10000"  
+		maxElementsOnDisk="0"  
+		eternal="false"  
+		overflowToDisk="false"  
+		diskPersistent="false"  
+		timeToIdleSeconds="300"  
+		timeToLiveSeconds="300"  
+		diskSpoolBufferSizeMB="50"  
+		diskExpiryThreadIntervalSeconds="300"  
+		memoryStoreEvictionPolicy="FIFO"  
+		/>
+		
+	<cache name="productCache"  
+		maxElementsInMemory="10000"  
+		maxElementsOnDisk="0"  
+		eternal="false"  
+		overflowToDisk="false"  
+		diskPersistent="false"  
+		timeToIdleSeconds="300"  
+		timeToLiveSeconds="300"  
+		diskSpoolBufferSizeMB="50"  
+		diskExpiryThreadIntervalSeconds="300"  
+		memoryStoreEvictionPolicy="FIFO"  
+		/>	
+</ehcache>

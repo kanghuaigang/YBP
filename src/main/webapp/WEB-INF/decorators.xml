@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/layouts/">
+	<excludes>
+		<pattern>/static/*</pattern>
+        <pattern>/role/addMenu/*</pattern>
+        <pattern>/menu/add</pattern>
+        <pattern>/menu/addPrivilege/*</pattern>
+        <pattern>/menu/update/*</pattern>
+        <pattern>/privilege/add</pattern>
+        <pattern>/admin/user/addRole/*</pattern>
+        <pattern>/admin/user/update/*</pattern>
+        <pattern>/admin/user/perm/*</pattern>
+        <pattern>/profile</pattern>
+        <pattern>/it/add</pattern>
+        <pattern>/operationInstall/add</pattern>
+        <pattern>/operationInstall/linkUpdate/*</pattern>
+        <pattern>/operationInstall/linkAdd/*</pattern>
+        <pattern>/it/update/*</pattern>
+        <pattern>/detail/add/*</pattern>
+        <pattern>/dataPractice/toUpdate/*</pattern>
+        <pattern>/collect/add</pattern>
+        <pattern>/operationInstall/details/*</pattern>
+        <pattern>/dataCheck/doserach/*</pattern>
+        <pattern>/register</pattern>
+	</excludes>
+	<decorator name="default" page="default.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+</decorators>

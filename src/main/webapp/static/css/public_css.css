@@ -1,0 +1,263 @@
+@charset "utf-8";
+/* CSS Document */
+/*不需要更改的常用样式*/
+body{padding:0px; margin:0px;}
+body {font-size:14px; font-family:"微软雅黑"; color:black; letter-spacing:1px;}
+div { margin:0px; padding:0px;}
+img{border:none;}
+a:link {color:#000; text-decoration:none;}
+a:visited {color:#000; text-decoration:none;}
+a:hover {color:#fe6600; text-decoration:none;}
+ul,li { margin:0px; padding:0px; list-style:none;}
+ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,p{ margin:0px; padding:0px;}
+img { display:block; border:none;}
+div,span.p,ul,li,input{padding: 0px; margin: 0px;}
+
+table{ border-collapse:collapse; border:0px; }
+table td{border:0px;}
+
+/*一些常用到的容易被忘记的样式属性*/
+.aaaaaaaaaa{-moz-border-radius: 4px; -webkit-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px;}/*页面圆角元素,新增加ms支持html5*/
+.dsdsdsdsds{word-wrap: break-word; break-word: break-all; white-space:nowrap;}/*强制折行不强制折行*/
+.cccccccccc{background-color:#141518;
+			background: -ms-linear-gradient(top, #141518 0, #020202 100%);
+    		background: -webkit-linear-gradient(top, #141518 0, #020202 100%);
+			background: -moz-linear-gradient(top, #141518 0, #020202 100%);
+			background: -o-linear-gradient(top, #141518 0, #020202 100%);
+			background: linear-gradient(to bottom, #141518 0, #020202 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#141518, endColorstr=#020202, GradientType=0);}
+.dddddddddd{box-shadow: 1px 1px 2px #cdcdcd;
+			-webkit-box-shadow: 1px 1px 2px #cdcdcd;
+			-ms-box-shadow: 1px 1px 2px #cdcdcd;
+			-moz-box- shadow: 1px 1px 2px #cdcdcd;}/*阴影*/
+.eeeeeeeeee{ filter:alpha(opacity=50); 
+			 -moz-opacity:0.5; 
+			 opacity:0.5;}/*页面透明度*/
+			 
+.position_picture_example{background: url(../img/asc_Chart_Thumbnail.png) no-repeat 0 -855px;}/*X轴为0，向下为负数移动，y轴为向下移动*/
+/*公用配置*/
+.colorRed{ color:#f10f0f;}
+.colorGreen{ color:#297d00;}
+.colorYellow{ color:#eec51f;}
+/*顶部样式*/
+.asc_topS_bg{ width:100%; float:left; height:24px; border-bottom:1px solid #ebebeb;
+			background-color:#ffffff;
+			background: -ms-linear-gradient(top, #ffffff 0, #f7f7f7 100%);
+    		background: -webkit-linear-gradient(top, #ffffff 0, #f7f7f7 100%);
+			background: -moz-linear-gradient(top, #ffffff 0, #f7f7f7 100%);
+			background: -o-linear-gradient(top, #ffffff 0, #f7f7f7 100%);
+			background: linear-gradient(to bottom, #ffffff 0, #f7f7f7 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f7f7f7, GradientType=0);}
+			
+.asc_topS{ width:1000px; margin:auto; height:24px; line-height:24px; font-size:12px;}
+.asc_topS_1{ float:left;}
+.asc_topS_2{ float:right;}
+.asc_topS_2_1{ float:left; }
+.asc_topS_2_2{ float:left; margin-left:4px;}
+.asc_topS_2_3{ float:left; margin-left:4px;}
+/*tittle样式*/
+.asc_topB_bg{ background-color:#fbfbfc; width:100%; height:114px; float:left; border-bottom:4px solid #cecece;}
+.asc_topB{ background-image:url(../images/public_image/logo_bg.png); width:1000px; height:114px; margin:auto;}
+.BDHUB_logo{ background-image:url(../images/public_image/logo.png); width:184px; height:85px; margin:15px 0 0 0; float:left;}
+.asc_searchBox{ width:416px; height:33px; float:right; margin:40px 0 0 0;}
+.asc_searchBox_1{ float:left; width:368px; height:31px; border:1px solid #cecece; background-color:#FFF; color:#666;
+				-moz-border-radius: 8px 0 0 8px;
+				-webkit-border-radius: 8px 0 0 8px; 
+				-ms-border-radius: 8px 0 0 8px; 
+				border-radius: 8px 0 0 8px;
+				box-shadow: 1px 1px 2px #cdcdcd;
+			-webkit-box-shadow: 1px 1px 2px #cdcdcd;
+			-ms-box-shadow: 1px 1px 2px #cdcdcd;
+			-moz-box- shadow: 1px 1px 2px #cdcdcd;}
+.asc_searchBox_2{ float:left; width:46px; height:33px; line-height:33px; color:#FFF; background-color:#4176af; text-align:center;
+				-moz-border-radius: 0 8px 8px 0;
+				-webkit-border-radius:  0 8px 8px 0; 
+				-ms-border-radius:  0 8px 8px 0; 
+				border-radius:  0 8px 8px 0;
+				box-shadow: 1px 1px 2px #cdcdcd;
+			-webkit-box-shadow: 1px 1px 2px #cdcdcd;
+			-ms-box-shadow: 1px 1px 2px #cdcdcd;
+			-moz-box- shadow: 1px 1px 2px #cdcdcd;}
+.asc_searchBox_2:hover{ background-color:#1b4879; cursor:pointer;}
+/*类导航栏样式*/
+.asc_nav_bg{ width:100%; height:105px; float:left;
+			background-image:url(../images/public_image/Allbackground.png);}
+.asc_nav{ margin:auto; width:1000px; height:105px;}
+.asc_nav_1{ width:732px; height:19px; margin:auto; background-image:url(../images/public_image/nav_somthing.png); line-height:19px; color:#FFF; font-size:12px; text-align:center;}
+.asc_nav_2{ width:1000px; height:86px; float:left;}
+.asc_nav_column{ float:left; width:229px; height:86px; background-image:url(../images/public_image/column_bg.png);}
+.asc_nav_column2{ float:left; width:229px; height:86px; background-image:url(../images/public_image/column_bg2.png);}
+.asc_nav_column:hover{ background-image:url(../images/public_image/column_bg2.png); cursor:pointer;}
+/*这个是箭头演示的样式.asc_nav_boult{ float:left; width:27px; height:24px; background-image:url(../images/public_image/right_bolut.png); margin:31px 0 0 0;}*/
+.columnIMG{ float:left; margin:14px 0 0 10px;}
+.asc_n_c2{ float:left; width:140px; height:54px; margin:17px 0 0 0;}
+.asc_cloumnName2{ margin:10px 0 0 0; float:left; font-size:15px; font-weight:bold; width:140px; text-align:center; color:#969696;}
+.asc_cloumnName2_Eng{ float:left; color:#13a7f5; font-size:10px; width:140px; text-align:center;}
+.asc_cloumnName{ float:left; color:#13a7f5; font-size:15px; font-weight:bold; width:140px; text-align:center;  margin:10px 0 0 0;}
+.asc_cloumnName_Eng{ float:left; font-size:10px; color:#969696; width:140px; text-align:center;}
+/*这个事日期设置.asc_cloumnDate{ width:140px; float:left; text-align:right; font-size:10px; color:#f06464;}*/
+/*公用的按钮之类的框架*/
+.asc_button_1{ float:left; width:140px; height:28px; line-height:27px; text-align:center; color:#FFF; background-color:#24a6e9; }
+.asc_button_1:hover{background-color:#1482ba; cursor:pointer;}
+.asc_button_2{ float:left; width:140px; height:28px; line-height:27px; text-align:center; color:#FFF; background-color:#e85e0e;}
+.asc_button_2:hover{background-color:#c45210; cursor:pointer;}
+/*底部框架*/
+.asc_bottom_copyright{ float:left; width:100%; height:28px; line-height:27px; background-color:#2e5b93; color:#fff; font-size:12px; text-align:center; margin-top:20px;}
+
+/*大背景*/
+.asc_main_bg{ width:100%; height:100%; overflow:hidden; float:left; background-image:url(../images/public_image/Allbackground.png);}
+.ascMain{ width:1000px; height:100%; overflow:hidden; margin:auto; margin-top:10px; background-color:#FFF; -moz-border-radius: 8px 8px 0 0; -webkit-border-radius: 8px 8px 0 0; -ms-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0;}
+.ascMain .tittle{ font-size:14px;  height:28px; line-height:28px; float:left; width:998px; border:1px solid #cecece; -moz-border-radius: 8px 8px 0 0; -webkit-border-radius: 8px 8px 0 0; -ms-border-radius: 8px 8px 0 0; border-radius: 8px 8px 0 0;
+			background-color:#ffffff;
+			background: -ms-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+    		background: -webkit-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: -moz-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: -o-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: linear-gradient(to bottom, #ffffff 0, #f1f1f1 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f1f1f1, GradientType=0);}
+.ascMain .tittle a{ color:#03C;}
+.ascMain div.tittle span.MrL10{ margin-left:10px; font-weight:bold;}
+.MainBox{   width:998px; border:1px solid #cecece; height:100%; overflow:hidden; float:left; margin-top:-1px;}
+/*文件上传*/
+.MainBox .Post{ float:left; margin:10px 4px 40px 19px; width:960px; height:100%; overflow:hidden;}
+.MainBox .Post > ul li{ float:left; width:960px; height:100%; margin-top:4px; background-color:#f6f6f6;}
+.MainBox .Post > ul li div.button{ text-align:center; float:right; width:120px; text-align:center; height:26px; color:#FFF; line-height:26px; background-color:#666;}
+.MainBox .Post > ul li div.button:hover{ cursor:pointer; background-color:#333;}
+.MainBox .BigTitle{ width:998px; float:left; height:30px; line-height:30px; font-size:14px; text-align:center; font-weight:bold;  margin:5px 0 5px 0; font-size:16px; color:#299253;}
+/*活动详情页的样式*/
+.MainBox .ACTMain{ width:320px; height:500px; float:left; margin:10px 0 10px 10px; border:1px solid #cecece; overflow:auto;}
+.MainBox .SwitchPicture{ width:645px; height:500px; float:left; margin:10px 0 10px 10px;  border:1px solid #cecece;}
+.MainBox .SwitchPicture div.title{ width:645px; height:24px; line-height:24px; float:left; font-weight:bold; text-indent:10px; background-color:#cecece;}
+.MainBox .SwitchPicture div.ProductionList{ float:left; margin:5px; width:635px; height:470px; background-color:#f6f6f6; overflow:auto;}
+.MainBox .SwitchPicture div.ProductionList table tr td{ padding:6px;}
+.MainBox .ACTMain ul li{ background-color:#f6f6f6; float:left; width:320px; margin-top:5px; height:100%; overflow:hidden; font-size:14px; text-indent:5px; padding-top:4px; padding-bottom:4px;}
+.MainBox .ACTMain ul li span{ margin-left:20px; font-weight:bold; color:#1c6db8;}
+.MainBox .ACTMain ul li div{ margin-right:60px; background-color:#e85e0e; color:#FFF; width:120px; height:24px; line-height:24px; float:right; text-align:center;}
+.MainBox .ACTMain ul li div:hover{ cursor:pointer; background-color:#ab4307;}
+/*发布调查*/
+.MainBox div.UserIdea{ float:left; width:920px; height:500px;  margin:10px 0 10px 29px; padding-bottom:5px; padding-left:10px;padding-right:10px; background-color:#f0faeb;}
+.MainBox div.UserIdea > ul li{ width:920px; float:left; height:100%; overflow:hidden; padding-top:5px; padding-bottom:5px;}
+.MainBox div.UserIdea > ul li input[type='text']{ width:140px; margin:0 15px 0 5px;}
+.MainBox div.UserIdea > ul li input[type='checkbox']{ margin:2px 4px 0 10px;}
+.MainBox div.UserIdea > ul li span{ font-weight:bold; font-size:15px;}
+.MainBox div.UserIdea > ul li b{ margin-left:10px; color:#f10f0f;}
+.MainBox div.UserIdea > ul li div{ float:left;}
+.MainBox div.UserIdea > ul li div.button{ margin-left:30px; background-color:#666; padding:2px 16px; background-color:#e85e0e; color:#FFF;}
+.MainBox div.UserIdea > ul li div.button:hover{ cursor:pointer; background-color:#ab4307;}
+.MainBox div.UserIdea div.finally{ float:left;  height:28px; margin-top:6px;}
+.MainBox div.UserIdea div.finally ul li{ float:left; width:140px; height:26px; line-height:26px; background-color:#f6f6f6; text-align:center; margin-left:80px; border:1px solid #cecece;}
+.MainBox div.UserIdea div.finally ul li:hover{ cursor:pointer; background-color:#666; color:#FFF; border:1px solid #666;}
+
+/*这里是搜索栏*/
+.MainBox .echarts{ float:left; background-color:#666; width:940px; height:250px; margin:10px 0 5px 29px; }
+.MainBox div.search{ width:998px; background-color:#fff; height:36px; float:left; line-height:36px;}
+.MainBox div.search .SelectSale{ width:238px;  height:24px; line-height:24px; float:left; margin:7px 0 0 5px;}
+.MainBox div.search input.SearchBox{ float:right; width:180px; height:20px; margin:7px 0 0 0;}
+.MainBox div.search div.name{ margin:6px 10px 0 10px; float:right; width:80px; height:24px; background-color:#24a6e9; text-align:center; line-height:24px; color:#FFF;}
+.MainBox div.search div.name:hover{ background-color:#166289; cursor:pointer;}
+.MainBox div.search div.sayNosay{ width:160px; height:24px; margin:6px 0 0 5px; line-height:24px; background-color:#ffffff; float:left; -moz-border-radius: 4px; -webkit-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; border:1px solid #adadad;}
+.MainBox div.search div.sayNosay > ul li{ float:left; text-align:center; width:79px; cursor:pointer;}
+.MainBox div.search div.sayNosay > ul li.first{ border-right:2px solid #adadad; -moz-border-radius: 4px 0 0 4px; -webkit-border-radius: 4px 0 0 4px; -ms-border-radius: 4px 0 0 4px; border-radius: 4px 0 0 4px;}
+.MainBox div.search div.sayNosay > ul li.second{ -moz-border-radius: 0 4px 4px 0; -webkit-border-radius: 0 4px 4px 0; -ms-border-radius: 0 4px 4px 0; border-radius: 0 4px 4px 0;}
+.MainBox div.search div.sayNosay > ul li.now{ background-color:#e1e1e1;
+			background: -ms-linear-gradient(top, #e1e1e1 0, #ffffff 100%);
+    		background: -webkit-linear-gradient(top, #e1e1e1 0, #ffffff 100%);
+			background: -moz-linear-gradient(top, #e1e1e1 0, #ffffff 100%);
+			background: -o-linear-gradient(top, #e1e1e1 0, #ffffff 100%);
+			background: linear-gradient(to bottom, #e1e1e1 0, #ffffff 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#e1e1e1, endColorstr=#ffffff, GradientType=0);}
+.MainBox div.search div.sayNosay > ul li.else{ color:#999; background-color:#ffffff;
+			background: -ms-linear-gradient(top, #ffffff 0, #e1e1e1 100%);
+    		background: -webkit-linear-gradient(top, #ffffff 0, #e1e1e1 100%);
+			background: -moz-linear-gradient(top, #ffffff 0, #e1e1e1 100%);
+			background: -o-linear-gradient(top, #ffffff 0, #e1e1e1 100%);
+			background: linear-gradient(to bottom, #ffffff 0, #e1e1e1 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#e1e1e1, GradientType=0);}
+			
+/*用户权限选取*/
+.MainBox .SayLeft{ float:left; width:260px; height:500px; border-right:1px solid #cecece;}
+.MainBox .SayLeft .Search{ float:left; height:36px; width:260px; background-color:#FFF;}
+.MainBox .SayLeft .Search input[type="text"]{ float:left; height:20px; margin:7px 0 0 28px; width:200px;}
+.MainBox .SayLeft .Friend{ float:left; height:464px; width:260px; overflow:auto;}
+.MainBox .SayRight{ float:left; width:100%; height:500px;}
+.MainBox .SayRight .peopleSay{ float:left; width:998px; height:380px;}
+.MainBox .SayRight .peopleSay > ul li{ width:1000px; height:70px; border-bottom:1px dashed #cecece;}
+.MainBox .SayRight .peopleSay > ul li div.who{ width:998px; height:25px; line-height:24px; float:left; font-weight:bold; text-indent:10px;}
+.MainBox .SayRight .peopleSay > ul li div.who span{ float:left; margin-right:10px;}
+.MainBox .SayRight .peopleSay > ul li div.who img{ float:left;}
+.MainBox .SayRight .peopleSay > ul li div.who b{ float:right; font-size:12px; margin-right:10px; cursor:pointer; color:#f10f0f; text-decoration:underline;}
+.MainBox .SayRight .peopleSay > ul li div.say{ width:998px; height:45px; float:left; text-indent:20px;}
+
+.MainBox .SayRight .TAB2{ height:30px; float:left; width:998px; }
+.MainBox .SayRight .TAB2 ul{ float:right;}
+.MainBox .SayRight .TAB2 ul li{ float:left; width:40px; height:20px; line-height:19px; margin-right:5px; text-align:center; border:1px solid #a6a6a6; -moz-border-radius: 4px; -webkit-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px;}
+.MainBox .SayRight .TAB2 ul li:hover{ background-color:#a6a6a6; color:#FFF; cursor:pointer;}
+
+
+.MainBox .SayRight .customerSay{ float:left; width:998px; height:54px; background-color:#f6f6f6;}
+.MainBox .SayRight .customerSay textarea{ width:750px; height:40px; float:left; margin:5px 0 0 5px; resize:none!important;}
+.MainBox .SayRight .customerSay .sendMine{ float:right; width:80px; height:24px; line-height:24px; text-align:center; background-color:#06C; color:#FFF; margin:15px 10px;}
+.MainBox .SayRight .customerSay .selectRole{ float:right; width:80px; height:24px; line-height:24px; text-align:center;   margin:15px 10px;}
+
+.MainBox .SayRight .customerSay .sendMine:hover{ cursor:pointer; background-color:#004e9b;}
+
+
+/*这里是表格*/
+.MainBox div.TableBox{ float:left;  width:998px; height:100%; overflow:hidden; background-color:#fff;}
+.MainBox div.TableBox table{ margin:4px 0 0 4px; font-size:13px;}
+.MainBox div.TableBox table tr td{ text-align:center; padding:10px 8px;}
+.MainBox div.TableBox table tr td a{ font-size:12px; color:#f06630;  padding:4px;}
+.MainBox div.TableBox table tr td a:hover{ padding:4px;  color:#C00;}
+.MainBox div.TableBox table tr.firstTr{ color:#FFF; background-color:#3c74b1;}
+.firstTr{ color:#FFF; background-color:#3c74b1;}
+.MainBox div.TabsBg{ width:998px; height:40px; float:left; margin:10px 0 0 0;}
+.MainBox div.TabsBg ul{ float:right;}
+.MainBox div.TabsBg ul li{ float:left; width:40px; height:20px; line-height:19px; margin-right:5px; text-align:center; border:1px solid #a6a6a6; -moz-border-radius: 4px; -webkit-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px;}
+/*.MainBox div.TabsBg ul li:hover{ background-color:#3c74b1; color:#FFF; }*/
+.asc_page_disable{background-color:#a6a6a6; color:#FFF;}
+.asc_page_active{background-color:#3c74b1; color:#FFF;cursor:pointer;}
+.asc_page_unactive{cursor:pointer;}
+
+/*微信端图片上传样式*/
+.MainBox div.countrySelect{ float:left; width:998px; height:30px; line-height:30px; margin-top:10px;}
+.MainBox div.countrySelect > span{ float:left; margin-left:10px;}
+.MainBox div.countrySelect > select{ float:left; margin:6px 3px 0 3px; width:140px;}
+
+.MainBox div.left{ float:left; width:320px; margin-bottom:10px;}
+.MainBox div.left > div.button{ float:left; width:320px; height:28px; background-color:#FFF; margin-top:10px;}
+.MainBox div.left > div.button ul li{ float:left; width:120px; height:24px; margin:1px 0 0 25px; text-align:center; line-height:23px; border:1px solid #adadad;
+			background-color:#ffffff;
+			background: -ms-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+    		background: -webkit-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: -moz-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: -o-linear-gradient(top, #ffffff 0, #f1f1f1 100%);
+			background: linear-gradient(to bottom, #ffffff 0, #f1f1f1 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#f1f1f1, GradientType=0);}
+.MainBox div.left > div.button ul li:hover{ color:#FFF; cursor:pointer;
+			background-color:#adadad;
+			background: -ms-linear-gradient(top, #adadad 0, #adadad 100%);
+    		background: -webkit-linear-gradient(top, #adadad 0, #adadad 100%);
+			background: -moz-linear-gradient(top, #adadad 0, #adadad 100%);
+			background: -o-linear-gradient(top, #adadad 0, #adadad 100%);
+			background: linear-gradient(to bottom, #adadad 0, #adadad 100%);
+			background-repeat: repeat-x;
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#adadad, endColorstr=#adadad, GradientType=0);}
+.MainBox div.left .kernel{ float:left; width:308px; height:100%; overflow:hidden; margin:10px 0 0 5px; border:1px solid #cecece;}
+.MainBox div.left .kernel > .title{ width:308px; height:160px; background-image:url(../images/public_image/nothing.png); float:left; background-size:308px 160px; 
+-moz-background-size:308px 160px; -ms-background-size:308px 160px; -webkit-background-size:308px 160px;}
+.MainBox div.left .kernel > .title .name{ float:left; width:308px; height:28px; line-height:27px; text-indent:10px; background-color:#5e5e5e; color:#FFF; margin-top:132px;}
+.MainBox div.left .kernel ul li{ float:left; width:308px; height:70px; background-color:#f6f6f6; border-bottom:1px solid #adadad; line-height:69px; text-indent:10px;}
+.MainBox div.left .kernel ul li img{ float:right; margin:5px 10px 0 0; background-size:60px 60px; 
+-moz-background-size:60px 60px; -ms-background-size:60px 60px; -webkit-background-size:60px 60px;}
+.MainBox div.left .kernel .addLi{ float:left; width:308px; height:70px; background-image:url(../images/public_image/addFrame.png); cursor:pointer;}
+
+			
+.MainBox div.right{ float:left; width:678px;  background-color:#666; margin-bottom:10px;}
+
+.addActivity{ float:left; width:120px; height:24px; background-color:#999; color:#FFF; text-align:center; line-height:23px; margin:6px 0 0 5px;}
