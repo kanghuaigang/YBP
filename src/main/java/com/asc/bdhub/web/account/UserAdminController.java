@@ -48,7 +48,7 @@ public class UserAdminController {
 		Subject currentUser = SecurityUtils.getSubject();
 		ShiroUser user = (ShiroUser) currentUser.getPrincipal();
 		for(Menu menu:menuList){
-			List<Menu> cMenu=menuService.getChildrenMenu(menu.getId());
+			List<Menu> cMenu=menu.getChildren();
 			for (Menu menu2 : cMenu) {
 				if(currentUser.isPermitted(menu2.getMenuName())||user.loginName.equals("admin")){
 					menu2.setVisible(true);
@@ -57,7 +57,7 @@ public class UserAdminController {
 				}
 			}
 			
-			menu.setChildren(cMenu);
+//			menu.setChildren(cMenu);
 			if(currentUser.isPermitted(menu.getMenuName())||user.loginName.equals("admin")){
 				menu.setVisible(true);
 			}else{
@@ -68,23 +68,21 @@ public class UserAdminController {
 		return "index";
 	}
 	
-	@RequestMapping(value="user",method = RequestMethod.GET)
+	@RequestMapping(value="users",method = RequestMethod.GET)
 	public String list(@RequestParam(value = "page", defaultValue = "1") int pageNumber, Model model) {
 		Page<UserInfo> users = accountService.getAllUser(1);
 		model.addAttribute("users", users);
 		return "account/adminUserList";
 	}
 	
-	@RequestMapping(value="user/search",method = RequestMethod.POST)
-	public String search(@RequestParam(value = "userName", required = false) String userName,
-			@RequestParam(value = "loginName", required = false) String loginName,
-			@RequestParam(value = "page", defaultValue = "1") int pageNumber,Model model){
-		UserInfo user=new UserInfo();
-		user.setUserName(userName);
-		user.setLoginName(loginName);
-		Page<UserInfo> users = accountService.getAllUser(1);
-		model.addAttribute("users", users);
-		return "account/adminUserList";
+	@RequestMapping(value="user",method = RequestMethod.GET)
+	public String search(Model model){
+//		UserInfo user=new UserInfo();
+//		user.setUserName(userName);
+//		user.setLoginName(loginName);
+//		Page<UserInfo> users = accountService.getAllUser(1);
+//		model.addAttribute("users", users);
+		return "account/userList";
 	}
 
 	@RequestMapping(value = "user/update/{id}", method = RequestMethod.GET)

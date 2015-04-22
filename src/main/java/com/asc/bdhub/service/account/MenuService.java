@@ -70,7 +70,7 @@ public class MenuService {
 		
 		if(menuList!=null && !menuList.isEmpty()){
 			for (Menu me : menuList) {
-				String sb="select * from ASC_MENU where Parent_Id ='"+me.getId()+"' order by menu_index";
+				String sb="select * from ASC_MENU where Parent_Id ="+me.getId()+" order by menu_index";
 				List<Menu> list=baseDao.findListToBean(sb, null, Menu.class);
 				me.setChildren(list);
 			}

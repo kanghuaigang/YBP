@@ -173,7 +173,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
+		<!-- ajax for refresh part of page -->
+		<dependency>
+			<groupId>org.ajaxanywhere</groupId>
+			<artifactId>ajaxanywhere</artifactId>
+			<version>1.2.1</version>
+		</dependency>		
 		<!-- WEB end -->
+		
 		
 		<!-- SECURITY begin -->
 		<dependency>

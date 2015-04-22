@@ -1,13 +1,14 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib prefix="sitemesh" uri="http://www.opensymphony.com/sitemesh/decorator" %>  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="aa" uri="http://ajaxanywhere.sourceforge.net/"%>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
 <c:set var="ctx" value="${pageContext.request.contextPath}" />
 
 <!DOCTYPE html>
 <html>
 <head>
-<title><sitemesh:title/></title>
+<title>壹商圈<sitemesh:title/></title>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta http-equiv="Cache-Control" content="no-store" />
 <meta http-equiv="Pragma" content="no-cache" />
@@ -44,8 +45,9 @@
 			$('.panel').remove();
 			$('.window-shadow').remove();
 			$('.window-mask').remove();
-		
-			doAjaxGet("context",$(this).attr("title"));
+			//window.location.href=$(this).attr("title");
+			$("#content").attr('src',$(this).attr("title"));
+			//doAjaxGet("context",$(this).attr("title"));
 			$("#nav li").each(function(index,item){
 				$(item).removeClass("active");
 			});
@@ -100,7 +102,7 @@
 	    		</div>
 		    </div>
 		    <div class="span10">
-		    	<sitemesh:body/>
+		    		<iframe id="content"  width=100% scrolling=no frameborder=0  allowTransparency=true></iframe> 
 		    </div>
 	    </div>
 	    </shiro:user>
@@ -134,7 +136,6 @@
 	<script src="${ctx}/static/jquery-validation/1.10.0/validate-methods.js" type="text/javascript"></script>
 	<script src="${ctx}/static/jquery-validation/1.10.0/messages_bs_zh.js" type="text/javascript"></script>
 	<script src="${ctx}/static/bootstrap/2.1.1/js/bootstrap.min.js" type="text/javascript"></script>
-	<shiro:user>
 	<script src="${ctx}/static/aa/aa.js" type="text/javascript"></script>
 	<script src="${ctx}/static/aa/aaExtend.js" type="text/javascript"></script>
 	<script src="${ctx}/static/bootstrap/2.1.1/js/bootstrap-typeahead.js" type="text/javascript"></script>
@@ -155,6 +156,5 @@
 			});
 		}
 	</script>
-	</shiro:user>
 </body>
 </html>
