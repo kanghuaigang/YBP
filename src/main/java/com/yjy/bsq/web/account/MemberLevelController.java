@@ -30,7 +30,7 @@ public class MemberLevelController {
 	@RequestMapping(value="list",method = RequestMethod.POST)
 	public Page<UserInfo> list(
 			@RequestParam(value = "start") Integer start,
-			@RequestParam(value = "start", required = false) MemberLevel memberLevel) {
+			@RequestParam(value = "memberLevel", required = false) MemberLevel memberLevel) {
 		Page<UserInfo> userPages=accountService.getAllUser(start);
 		return userPages;
 	}
