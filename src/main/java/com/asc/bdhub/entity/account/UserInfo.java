@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.google.common.collect.Lists;
 
 @Entity
-@Table(name="ASC_USER_INFO")
+@Table(name="YSQ_USER_INFO")
 public class UserInfo extends IdEntity{
 	private String userName;	//用户名称
 	private String loginName;	//登录名称

@@ -65,12 +65,12 @@ public class MenuService {
 		Menu menu = new Menu();
 		menu.setParentId(null);
 		StringBuffer sbf=new StringBuffer();
-		sbf.append(" select * from ASC_MENU where Parent_Id is null order by menu_index");
+		sbf.append(" select * from YSQ_MENU where Parent_Id is null order by menu_index");
 		List<Menu> menuList=baseDao.findListToBean(sbf.toString(), null, Menu.class);
 		
 		if(menuList!=null && !menuList.isEmpty()){
 			for (Menu me : menuList) {
-				String sb="select * from ASC_MENU where Parent_Id ="+me.getId()+" order by menu_index";
+				String sb="select * from YSQ_MENU where Parent_Id ="+me.getId()+" order by menu_index";
 				List<Menu> list=baseDao.findListToBean(sb, null, Menu.class);
 				me.setChildren(list);
 			}

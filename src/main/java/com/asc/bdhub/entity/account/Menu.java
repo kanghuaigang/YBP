@@ -20,7 +20,7 @@ import com.google.common.collect.Lists;
 
 /** 菜单 */
 @Entity
-@Table(name = "ASC_MENU")
+@Table(name = "YSQ_MENU")
 public class Menu extends IdEntity{
 	/** 父菜单ID */
 	private Integer parentId;

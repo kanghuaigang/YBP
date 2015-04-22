@@ -46,7 +46,7 @@
 			$('.window-shadow').remove();
 			$('.window-mask').remove();
 			//window.location.href=$(this).attr("title");
-			$("#content").attr('src',$(this).attr("title"));
+			$("#content").load($(this).attr("title"));
 			//doAjaxGet("context",$(this).attr("title"));
 			$("#nav li").each(function(index,item){
 				$(item).removeClass("active");
@@ -102,7 +102,7 @@
 	    		</div>
 		    </div>
 		    <div class="span10">
-		    		<iframe id="content"  width=100% scrolling=no frameborder=0  allowTransparency=true></iframe> 
+		    	<div id="content"></div>
 		    </div>
 	    </div>
 	    </shiro:user>

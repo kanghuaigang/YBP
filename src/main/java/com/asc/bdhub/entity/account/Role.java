@@ -16,7 +16,7 @@ import com.asc.bdhub.entity.IdEntity;
 import com.google.common.collect.Lists;
 
 @Entity
-@Table(name="ASC_ROLE")
+@Table(name="YSQ_ROLE")
 public class Role  extends IdEntity{
 
 	private String roleName;	//角色名称

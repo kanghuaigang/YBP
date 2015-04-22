@@ -179,7 +179,7 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t$('.window-shadow').remove();\n");
       out.write("\t\t\t$('.window-mask').remove();\n");
       out.write("\t\t\t//window.location.href=$(this).attr(\"title\");\n");
-      out.write("\t\t\t$(\"#content\").attr('src',$(this).attr(\"title\"));\n");
+      out.write("\t\t\t$(\"#content\").load($(this).attr(\"title\"));\n");
       out.write("\t\t\t//doAjaxGet(\"context\",$(this).attr(\"title\"));\n");
       out.write("\t\t\t$(\"#nav li\").each(function(index,item){\n");
       out.write("\t\t\t\t$(item).removeClass(\"active\");\n");
@@ -557,7 +557,7 @@ public final class default_jsp extends org.apache.jasper.runtime.HttpJspBase
         out.write("\t    \t\t</div>\n");
         out.write("\t\t    </div>\n");
         out.write("\t\t    <div class=\"span10\">\n");
-        out.write("\t\t    \t\t<iframe id=\"content\"  width=100% scrolling=no frameborder=0  allowTransparency=true></iframe> \n");
+        out.write("\t\t    \t<div id=\"content\"></div>\n");
         out.write("\t\t    </div>\n");
         out.write("\t    </div>\n");
         out.write("\t    ");

@@ -5,6 +5,22 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %> 
 <c:set var="ctx" value="${pageContext.request.contextPath}"/>
+
+
+<c:if test="${not empty message}">
+	<div id="message" class="alert alert-success"><button data-dismiss="alert" class="close">×</button>${message}</div>
+</c:if>
+
+<form id="usersForm" name="usersForm" method="post" class="form-inline" style="margin-bottom:5px;">
+	<input type="text" id="userName" name="userName" placeholder="用户名称" title="用户名称"/>
+	<input type="text" name="loginName" placeholder="登录名称" title="登录名称"/>
+	<input class="btn btn-primary" onclick="pageNav(0)" type="button" value="搜索"/>
+	<input class="btn btn-primary" type="reset" value="重置"/>
+	<a class="btn btn-primary" 
+		data-toggle="modal" 
+		data-target="#addUserDialog"
+		data-backdrop="static">新增用户</a>
+</form>
 <script type="text/html" id='user_list_template'>
 	<table class="table table-striped table-bordered table-condensed">
 		<thead>
@@ -44,22 +60,7 @@ $('#state').select2({width:'225px'});
 		});
 	}
 	pageNav(0);
-</script>	
-
-<c:if test="${not empty message}">
-	<div id="message" class="alert alert-success"><button data-dismiss="alert" class="close">×</button>${message}</div>
-</c:if>
-<form id="usersForm" name="usersForm" method="post" class="form-inline" style="margin-bottom:5px;">
-	<input type="text" id="userName" name="userName" placeholder="用户名称" title="用户名称"/>
-	<input type="text" name="loginName" placeholder="登录名称" title="登录名称"/>
-	<input class="btn btn-primary" onclick="pageNav(0)" type="button" value="搜索"/>
-	<input class="btn btn-primary" type="reset" value="重置"/>
-	<a class="btn btn-primary" 
-		data-toggle="modal" 
-		data-target="#addUserDialog"
-		data-backdrop="static">新增用户</a>
-</form>
-	
+</script>		
 	<div id="ascTableList" ></div>
 	<div id="ascTablePagebar"></div>
 

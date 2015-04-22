@@ -16,7 +16,7 @@ import com.google.common.collect.Lists;
 
 /** 菜单 */
 @Entity
-@Table(name = "ASC_MENU_PRIVILEGE")
+@Table(name = "YSQ_MENU_PRIVILEGE")
 public class MenuPrivilege extends IdEntity{
 	private Menu menu;
 	private Privilege privilege;

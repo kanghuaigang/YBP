@@ -18,7 +18,7 @@ import com.google.common.collect.Lists;
  * 
  **/
 @Entity
-@Table(name = "ASC_PRIVILEGE")
+@Table(name = "YSQ_PRIVILEGE")
 public class Privilege extends IdEntity{
 	
 	private String privilegeCode;		//权限编码
