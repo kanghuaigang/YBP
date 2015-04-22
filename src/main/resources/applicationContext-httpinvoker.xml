@@ -12,9 +12,9 @@
 		<property name = "service">
 			<ref bean = "remoteService"/>
 		</property>
-		<property name = "serviceInterface" value = "com.asc.bdhub.service.remote.IRemoteService">
+		<property name = "serviceInterface" value = "com.yjy.bsq.service.remote.IRemoteService">
 		</property>
 	</bean>
-	<bean id = "remoteService" class = "com.asc.bdhub.service.remote.RemoteService"/>
+	<bean id = "remoteService" class = "com.yjy.bsq.service.remote.RemoteService"/>
 	
 </beans>

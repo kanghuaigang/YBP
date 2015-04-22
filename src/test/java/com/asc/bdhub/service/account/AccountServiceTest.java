@@ -5,7 +5,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import com.asc.bdhub.repository.account.UserInfoDao;
+import com.yjy.bsq.repository.account.UserInfoDao;
+import com.yjy.bsq.service.account.AccountService;
 
 /**
  * AccountService的测试用例, 测试Service层的业务逻辑.
