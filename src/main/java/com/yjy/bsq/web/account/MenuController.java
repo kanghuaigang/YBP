@@ -16,9 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.yjy.bsq.entity.account.Menu;
-import com.yjy.bsq.entity.account.Privilege;
 import com.yjy.bsq.service.account.MenuService;
-import com.yjy.bsq.service.account.PrivilegeService;
 
 @Controller
 @RequestMapping(value = "/menu")
@@ -26,8 +24,6 @@ public class MenuController {
 	private static final int PAGE_SIZE = 15;
 	@Autowired
 	private MenuService menuService;
-	@Autowired
-	private PrivilegeService privilegeService;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String list(@RequestParam(value = "page", defaultValue = "1") int pageNumber, Model model) {
@@ -74,14 +70,14 @@ public class MenuController {
 	@RequestMapping(value="addPrivilege/{id}",method = RequestMethod.GET)
 	public String addPrivilege(@PathVariable("id") String id, Model model) {
 		Menu menu=menuService.getMeun(id);
-		List<Privilege> menuPrivilege=menu.getMenuPrivilege();
-		List<Privilege> privileges=privilegeService.getAllPrivilege(1, 1000).getContent();
-		for (Privilege privilege : menuPrivilege) {
-			if(privileges.contains(privilege)){
-				privilege.setChecked(true);
-			}
-		}
-		model.addAttribute("privileges",privileges);
+//		List<Privilege> menuPrivilege=menu.getMenuPrivilege();
+//		List<Privilege> privileges=privilegeService.getAllPrivilege(1, 1000).getContent();
+//		for (Privilege privilege : menuPrivilege) {
+//			if(privileges.contains(privilege)){
+//				privilege.setChecked(true);
+//			}
+//		}
+//		model.addAttribute("privileges",privileges);
 		model.addAttribute("menuId",id);
 		return "account/menuPrivilege";
 	}

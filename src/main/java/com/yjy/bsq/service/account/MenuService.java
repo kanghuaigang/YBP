@@ -8,10 +8,6 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-import org.apache.commons.collections.CollectionUtils;
-import org.apache.commons.collections.ListUtils;
-import org.apache.commons.collections.Transformer;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -22,9 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.yjy.bsq.common.base.BaseDao;
 import com.yjy.bsq.entity.account.Menu;
-import com.yjy.bsq.entity.account.Privilege;
 import com.yjy.bsq.repository.account.MenuDao;
-import com.yjy.bsq.repository.account.PrivilegeDao;
 
 /**
  * 菜单管理类.
@@ -40,8 +34,6 @@ public class MenuService {
 	private BaseDao baseDao;
 	@Autowired
 	private MenuDao menuDao;
-	@Autowired
-	private PrivilegeDao privilegeDao;
 	
 	public Menu getMeun(String id){
 		return menuDao.findOne(id);
@@ -95,22 +87,22 @@ public class MenuService {
 	@Transactional(readOnly = false)
 	public void addMenuPrivilege(String menuId,List<String> privilegeIds){
 		Menu menu=menuDao.findOne(menuId);
-		List<Privilege> menuPri=menu.getMenuPrivilege();
-		List<String> priIds=(List<String>) CollectionUtils.collect(menuPri, new Transformer(){
-			public Object transform(Object arg0) {
-				Privilege u = (Privilege) arg0;
-                return u.getId();
-            }
-		});
-		List<String> delIds=ListUtils.subtract(priIds, privilegeIds);
-		for (String id : delIds) {
-			menu.removePrivilege(privilegeDao.findOne(id));
-		}
-		for (String id : privilegeIds) {
-			if(StringUtils.isNotBlank(id)&&!priIds.contains(id)){
-				menu.addPrivilege(privilegeDao.findOne(id));
-			}
-		}
+//		List<Privilege> menuPri=menu.getMenuPrivilege();
+//		List<String> priIds=(List<String>) CollectionUtils.collect(menuPri, new Transformer(){
+//			public Object transform(Object arg0) {
+//				Privilege u = (Privilege) arg0;
+//                return u.getId();
+//            }
+//		});
+//		List<String> delIds=ListUtils.subtract(priIds, privilegeIds);
+//		for (String id : delIds) {
+//			menu.removePrivilege(privilegeDao.findOne(id));
+//		}
+//		for (String id : privilegeIds) {
+//			if(StringUtils.isNotBlank(id)&&!priIds.contains(id)){
+//				menu.addPrivilege(privilegeDao.findOne(id));
+//			}
+//		}
 		menuDao.save(menu);
 	}
 	

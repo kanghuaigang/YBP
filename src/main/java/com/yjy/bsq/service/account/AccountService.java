@@ -28,11 +28,9 @@ import org.springside.modules.utils.Encodes;
 
 import com.google.common.collect.Lists;
 import com.yjy.bsq.entity.account.Menu;
-import com.yjy.bsq.entity.account.Privilege;
 import com.yjy.bsq.entity.account.Role;
 import com.yjy.bsq.entity.account.UserInfo;
 import com.yjy.bsq.repository.account.MenuDao;
-import com.yjy.bsq.repository.account.PrivilegeDao;
 import com.yjy.bsq.repository.account.RoleDao;
 import com.yjy.bsq.repository.account.UserInfoDao;
 import com.yjy.bsq.service.ServiceException;
@@ -63,8 +61,6 @@ public class AccountService {
 	private UserInfoDao userInfoDao;
 	@Autowired
 	private MenuDao menuDao;
-	@Autowired
-	private PrivilegeDao privilegeDao;
 	@Autowired
 	private RoleDao roleDao;
 
@@ -159,15 +155,15 @@ public class AccountService {
 	public List<String> getAdminPermission() {
 		List<String> perStr = Lists.newArrayList();
 		List<Menu> menus = menuDao.findAll();
-		List<Privilege> privileges = privilegeDao.findAll();
-		for (Menu m : menus) {
-			for (Privilege p : privileges) {
-				StringBuilder sb = new StringBuilder();
-				sb.append(m.getMenuCode()).append("_p:")
-						.append(p.getPrivilegeCode());
-				perStr.add(sb.toString());
-			}
-		}
+//		List<Privilege> privileges = privilegeDao.findAll();
+//		for (Menu m : menus) {
+//			for (Privilege p : privileges) {
+//				StringBuilder sb = new StringBuilder();
+//				sb.append(m.getMenuCode()).append("_p:")
+//						.append(p.getPrivilegeCode());
+//				perStr.add(sb.toString());
+//			}
+//		}
 		return perStr;
 	}
 	

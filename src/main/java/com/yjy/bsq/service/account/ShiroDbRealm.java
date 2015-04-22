@@ -24,7 +24,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springside.modules.utils.Encodes;
 
 import com.yjy.bsq.entity.account.Menu;
-import com.yjy.bsq.entity.account.MenuPrivilege;
 import com.yjy.bsq.entity.account.Role;
 import com.yjy.bsq.entity.account.UserInfo;
 
@@ -69,10 +68,10 @@ public class ShiroDbRealm extends AuthorizingRealm {
 		}else{
 			for (Role role : accountService.getUserRoles(shiroUser.id)) {
 				roleList.add(role.getRoleCode());
-				List<MenuPrivilege> mps=role.getMps();
-				for (MenuPrivilege mp : mps) {
-					perList.add(mp.getMenu().getMenuCode()+"_p:"+mp.getPrivilege().getPrivilegeCode());
-				}
+//				List<MenuPrivilege> mps=role.getMps();
+//				for (MenuPrivilege mp : mps) {
+//					perList.add(mp.getMenu().getMenuCode()+"_p:"+mp.getPrivilege().getPrivilegeCode());
+//				}
 			}
 			for(Menu menu:accountService.getUserMenus(shiroUser.id)){
 				perList.add(menu.getMenuName());

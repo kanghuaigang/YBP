@@ -26,7 +26,6 @@ public class Role  extends IdEntity{
 	private Date createDate;
 	private List<UserInfo> users=Lists.newArrayList();
 	private boolean checked;
-	private List<MenuPrivilege> mps=Lists.newArrayList();
 	
 	public String getRoleName() {
 		return roleName;
@@ -81,39 +80,6 @@ public class Role  extends IdEntity{
 	@Override
 	public String toString() {
 		return roleName;
-	}
-	
-	@ManyToMany(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
-	@JoinTable(name = "ASC_ROLE_PRIVILEGE", 
-    joinColumns = { @JoinColumn(name = "ROLE_ID", referencedColumnName = "ID") }, 
-    inverseJoinColumns = { @JoinColumn(name = "MP_ID", referencedColumnName = "ID") })
-	public List<MenuPrivilege> getMps() {
-		return mps;
-	}
-	public void setMps(List<MenuPrivilege> mps) {
-		this.mps = mps;
-	}
-	
-	@Transient
-	public List<Privilege> getPrivileges(){
-		List<MenuPrivilege> mps=this.getMps();
-		List<Privilege> pris=Lists.newArrayList();
-		for(MenuPrivilege mp:mps){
-			pris.add(mp.getPrivilege());
-		}
-		return pris;
-	}
-	
-	public void addPrivilege(MenuPrivilege privilege){
-		this.getMps().add(privilege);
-	}
-	
-	public void addPrivileges(List<MenuPrivilege> privileges){
-		this.getMps().addAll(privileges);
-	}
-	
-	public void removePrivilege(MenuPrivilege privilege){
-		this.getMps().remove(privilege);
 	}
 	
 	

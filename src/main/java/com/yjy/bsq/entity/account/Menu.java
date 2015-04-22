@@ -3,12 +3,9 @@ package com.yjy.bsq.entity.account;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
@@ -43,7 +40,6 @@ public class Menu extends IdEntity{
 	private Date createDate;
 	private Integer menuIndex;
 	
-	private List<MenuPrivilege> privileges=Lists.newArrayList();
 	private List<Menu> children = Lists.newArrayList();
 
 	@Column(length=100)
@@ -117,42 +113,6 @@ public class Menu extends IdEntity{
 		return menuName;
 	}
 	
-	@OneToMany(fetch=FetchType.LAZY,
-			mappedBy="menu",
-			orphanRemoval=true,
-			cascade={CascadeType.PERSIST,CascadeType.MERGE})
-	public List<MenuPrivilege> getPrivileges() {
-		return privileges;
-	}
-
-	public void setPrivileges(List<MenuPrivilege> privileges) {
-		this.privileges = privileges;
-	}
-
-	public void addPrivilege(Privilege privilege){
-		MenuPrivilege mp=new MenuPrivilege();
-		mp.setMenu(this);
-		mp.setPrivilege(privilege);
-		this.privileges.add(mp);
-	}
-	
-	public void removePrivilege(Privilege privilege){
-		List<MenuPrivilege> temp=Lists.newArrayList();
-		for(MenuPrivilege mp:this.getPrivileges()){
-			if(mp.getMenu().getId().equals(this.getId())&&mp.getPrivilege().getId()==privilege.getId()){
-				temp.add(mp);
-			}
-		}
-		this.privileges.removeAll(temp);	}
-	
-	@Transient
-	public List<Privilege> getMenuPrivilege(){
-		List<Privilege> pris=Lists.newArrayList();
-		for(MenuPrivilege mp:this.privileges){
-			pris.add(mp.getPrivilege());
-		}
-		return pris;
-	}
 	
 	@Transient
 	public boolean isLeaf() {
